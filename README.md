@@ -4,6 +4,12 @@ Um Quiz rápido para testar seus conhecimentos sobre programação.
 <img width="548" height="774" alt="image" src="https://github.com/user-attachments/assets/7a1e100e-45b8-4ab5-a6b0-d23e8aa9770e" />
 <img width="549" height="779" alt="image" src="https://github.com/user-attachments/assets/d1fc3e7e-7599-4d59-9c12-22031d71c29b" />
 
+## Projeto
+
+**Link do projeto:**
+
+https://beatrizar4ujo.github.io/quiz_tech/
+
 
 #  QuizTech
 
@@ -31,11 +37,7 @@ Ao final do quiz é apresentada a pontuação juntamente com uma mensagem de des
 - JavaScript
 - JSON
 
-## Projeto
 
-**Link do projeto:**
-
-(https://beatrizar4ujo.github.io/quiz_tech/)
 
 ## 👩‍💻 Autora
 
