@@ -6,9 +6,8 @@ Um Quiz rápido para testar seus conhecimentos sobre programação.
 
 ## Projeto
 
-**Link do projeto:**
 
-https://beatrizar4ujo.github.io/quiz_tech/
+[Acessar o projeto](https://beatrizar4ujo.github.io/quiz_tech/)
 
 
 #  QuizTech
