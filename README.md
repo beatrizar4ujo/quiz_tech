@@ -35,7 +35,7 @@ Ao final do quiz é apresentada a pontuação juntamente com uma mensagem de des
 
 **Link do projeto:**
 
-https://SEU-LINK.github.io/quiz-tech/
+(https://beatrizar4ujo.github.io/quiz_tech/)
 
 ## 👩‍💻 Autora
 
