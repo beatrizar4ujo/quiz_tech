@@ -1,0 +1,33 @@
+[
+    {
+        "pergunta": "Qual linguagem é usada para estilizar páginas web?",
+        "opcoes": ["HTML", "CSS", "JavaScript", "Python"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual tag cria um título principal em HTML?",
+        "opcoes": ["&lt;p&gt;", "&lt;div&gt;", "&lt;h1&gt;", "&lt;span&gt;"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual símbolo é usado para selecionar uma classe no CSS?",
+        "opcoes": [".", "#", "*", "$"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual linguagem adiciona interatividade ao site?",
+        "opcoes": ["CSS", "HTML", "SQL", "JavaScript"],
+        "resposta": 3
+    },
+    {
+        "pergunta": "O que significa CSS?",
+        "opcoes": [
+            "Computer Style Sheet",
+            "Creative Style System",
+            "Cascading Style Sheets",
+            "Color Style Sheet"
+        ],
+        "resposta": 2
+    }
+]
+

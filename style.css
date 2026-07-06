@@ -1,0 +1,404 @@
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* Variáveis do tema claro */
+:root{
+
+    /* Cores do fundo */
+    --fundo1:#a066fc;
+    --fundo2:#d5bdf7;
+    --fundo3:#377fdd;
+
+    /* Cor do card principal */
+    --card:#f3dfff;
+
+    /* Cores dos textos */
+    --titulo:#111111;
+    --texto:#767676;
+
+    /* Botões principais */
+    --botao:#a066fc;
+    --botaoHover:#c3afdf;
+
+    /* Alternativas */
+    --resposta:#f7f7f7;
+    --respostaHover:#dbbff7;
+
+    /* Botão de troca de tema */
+    --temaBtn:rgba(224,197,250,.25);
+    --temaBtnHover:#e6dcfa;
+    --icone:#f1f36e;
+
+    /* Cor da borda ao passar o mouse */
+    --bordaHover:#c19bfa;
+    
+
+}
+
+/* Sobrescreve as variáveis quando o body recebe a classe "dark" */
+body.dark{
+
+    --fundo1:#7323cf;
+    --fundo2:#c28ff1;
+    --fundo3:#2905f3;
+
+    --card:#2c2235;
+
+    --titulo:#ffffff;
+    --texto:#d2d2d2;
+
+    --botao:#7323cf;
+    --botaoHover:#9c72ff;
+
+    --resposta:#b096c5;
+    --respostaHover:#755094;
+
+    --temaBtn:rgba(255,255,255,.08);
+    --temaBtnHover:rgba(255,255,255,.15);
+    --icone:#f1f36e;
+
+    --bordaHover:#8b5cf6;
+
+}
+
+/* Remove margens padrão e facilita o cálculo do tamanho dos elementos */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+
+    /* Fundo em degradê utilizando variáveis CSS */
+    background:linear-gradient(
+        135deg,
+        var(--fundo1),
+        var(--fundo2),
+        var(--fundo3)
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+
+    width:430px;
+    background:var(--card);
+    border-radius:35px;
+    padding:35px;
+
+    /* Sombra do card */
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+    font-family:'Space Grotesk', sans-serif;
+    font-size:2.2rem;
+    font-weight:700;
+    color:var(--titulo);
+    line-height:42px;
+    margin-bottom:15px;
+
+}
+
+h2{
+
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--titulo);
+    margin-bottom:25px;
+
+}
+
+p{
+
+    color:var(--texto);
+    line-height:24px;
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+button{
+
+    width:100%;
+    border:none;
+    border-radius:18px;
+    padding:15px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+
+    /* Suaviza animações de hover */
+    transition:.3s;
+
+}
+
+/* Botões principais */
+
+#btnIniciar,
+#proxima{
+
+    background:var(--botao);
+    color:#111;
+    margin-top:25px;
+
+}
+
+#btnIniciar:hover,
+#proxima:hover{
+
+    transform:translateY(-2px);
+    background:var(--botaoHover);
+
+}
+
+/* Container das alternativas */
+#respostas{
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+}
+
+#respostas button{
+
+    background:var(--resposta);
+    color:#111;
+    text-align:left;
+    padding:16px 18px;
+    border:2px solid transparent;
+
+}
+
+#respostas button:hover{
+
+    border-color:var(--bordaHover);
+    background:var(--respostaHover);
+
+}
+
+/* Alternativa correta */
+
+.correta{
+
+    background:#d7f4df !important;
+    border:2px solid #53b66f !important;
+    color:#1d5e32 !important;
+
+}
+
+/* Alternativa incorreta */
+
+.errada{
+
+    background:#ffdcdc !important;
+    border:2px solid #ff6d6d !important;
+    color:#a52b2b !important;
+
+}
+
+/* Botão da tela final */
+
+#jogarnovamente{
+
+    background:var(--botao);
+    color:#111;
+
+}
+
+#jogarnovamente:hover{
+
+    background:var(--botaoHover);
+
+}
+
+#resultado{
+
+    text-align:center;
+
+}
+
+#pontuacao{
+
+    font-size:22px;
+    font-weight:600;
+    color:#111;
+    margin:25px 0;
+
+}
+
+/* Animação ao trocar de tela */
+
+#quiz,
+#inicio,
+#resultado{
+
+    animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsividade para celulares */
+
+@media (max-width:600px){
+
+    body{
+
+        padding:20px;
+        align-items:center;
+
+    }
+
+    .container{
+
+        width:100%;
+        padding:25px;
+        border-radius:25px;
+
+    }
+
+    h1{
+
+        font-size:1.8rem;
+        line-height:35px;
+
+    }
+
+    h2{
+
+        font-size:1.3rem;
+
+    }
+
+    button{
+
+        font-size:15px;
+        padding:14px;
+
+    }
+
+}
+
+/* Círculo que contém o ícone principal */
+
+.icone{
+
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+
+    background:linear-gradient(135deg,#d9b8ff,#b675ff);
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(148,91,255,.25);
+
+}
+
+.icone span{
+
+    font-size:48px;
+    color:white;
+
+}
+
+/* Classe adicionada via JavaScript para animar cada pergunta */
+
+.conteudoQuiz{
+
+    animation:slidePergunta .45s ease;
+
+}
+
+/* Animação de entrada lateral */
+
+@keyframes slidePergunta{
+
+    0%{
+
+        opacity:0;
+        transform:translateX(30px);
+
+    }
+
+    100%{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* Botão de alternância entre tema claro e escuro */
+
+#temaBtn{
+
+    /* Fica fixo na tela mesmo durante a navegação */
+    position:fixed;
+
+    top:25px;
+    left:25px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Efeito de vidro (Glassmorphism) */
+    background:var(--temaBtn);
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 30px rgba(74,74,75,.12);
+
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#temaBtn i{
+
+    font-size:24px;
+    color:var(--icone);
+    transition:.4s;
+
+}
+
+#temaBtn:hover{
+
+    transform:scale(1.08);
+    background:var(--temaBtnHover);
+
+}
